@@ -2,7 +2,7 @@ package code
 
 import "fmt"
 
-//nolint: golint
+// nolint: golint
 var (
 	// Common errors
 	OK                  = &Errno{Code: 0, Message: "OK"}

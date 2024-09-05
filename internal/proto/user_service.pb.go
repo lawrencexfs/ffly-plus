@@ -89,7 +89,7 @@ func (m *UserRegisterRequest) GetPasswordConfirm() string {
 	return ""
 }
 
-//返回的结构体
+// 返回的结构体
 type RequestReplay struct {
 	Code                 int64    `protobuf:"varint,1,opt,name=code,proto3" json:"code,omitempty"`
 	Message              string   `protobuf:"bytes,2,opt,name=message,proto3" json:"message,omitempty"`
@@ -241,7 +241,7 @@ func (m *DeletetUserRequest) GetUserName() string {
 	return ""
 }
 
-//返回的结构体
+// 返回的结构体
 type SelectUserRequest struct {
 	UserId               int64    `protobuf:"varint,1,opt,name=user_id,json=userId,proto3" json:"user_id,omitempty"`
 	UserName             string   `protobuf:"bytes,2,opt,name=user_name,json=userName,proto3" json:"user_name,omitempty"`

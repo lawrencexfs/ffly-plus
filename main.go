@@ -12,7 +12,6 @@ import (
 	"github.com/colinrs/ffly-plus/internal/version"
 	"github.com/colinrs/ffly-plus/router"
 	"github.com/colinrs/ffly-plus/rpc"
-	serverGin "github.com/colinrs/pkgx/server/gin"
 
 	"github.com/arl/statsviz"
 	"github.com/urfave/cli"
@@ -68,9 +67,9 @@ func main() {
 		if err != nil {
 			return err
 		}
-		if err = InitValidator(); err != nil {
-			return err
-		}
+		// if err = InitValidator(); err != nil {
+		// 	return err
+		// }
 		go func() {
 			err = rpc.InitRPCService()
 			if err != nil {
@@ -93,13 +92,13 @@ func runMonti() {
 }
 
 // InitValidator ...
-func InitValidator() error {
-	var validateFuns []*serverGin.ValidateFuncs
-	validateFuns = append(validateFuns, &serverGin.ValidateFuncs{
-		TagName: "ccless",
-		Fn:      serverGin.IsLess,
-		Message: "{0} not less:{1}",
-	})
+// func InitValidator() error {
+// 	var validateFuns []*serverGin.ValidateFuncs
+// 	validateFuns = append(validateFuns, &serverGin.ValidateFuncs{
+// 		TagName: "ccless",
+// 		Fn:      serverGin.IsLess,
+// 		Message: "{0} not less:{1}",
+// 	})
 
-	return serverGin.InitValidator(validateFuns)
-}
+// 	return serverGin.InitValidator(validateFuns)
+// }

@@ -8,8 +8,8 @@ import (
 	"github.com/colinrs/ffly-plus/internal/code"
 	"github.com/colinrs/ffly-plus/service"
 
-	serverGin "github.com/colinrs/pkgx/server/gin"
 	"github.com/gin-gonic/gin"
+	serverGin "github.com/gin-gonic/gin"
 )
 
 // UserController ...
@@ -146,6 +146,6 @@ func UserHello(ctx context.Context, request *UserHelloRequest) (UserHelloRespons
 // Init ...
 func (uc *UserController) Init(engine *serverGin.Engine) error {
 	fmt.Print("run UserController Init\n")
-	engine.GET("/user_hello", UserHello)
+	// engine.GET("/user_hello", UserHello)
 	return nil
 }

@@ -2,9 +2,10 @@ package models
 
 // CustomeModel a basic GoLang struct which includes the following fields: ID, CreatedAt, UpdatedAt, DeletedAt
 // It may be embedded into your model or you may build your own model without it
-//    type User struct {
-//      CustomeModel
-//    }
+//
+//	type User struct {
+//	  CustomeModel
+//	}
 type CustomeModel struct {
 	ID        uint   `gorm:"primarykey"`
 	CreatedAt uint64 `json:"created_at"`

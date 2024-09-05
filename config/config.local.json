@@ -11,7 +11,7 @@
         "addr":"127.0.0.1:3306",
         "db":"ffly",
         "username":"root",
-        "password":"root",
+        "password":"",
         "max_idel_conn":10,
         "max_open_conn":256,
         "conn_max_lifetime":600

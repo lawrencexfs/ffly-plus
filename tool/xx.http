@@ -1,0 +1,45 @@
+POST http://127.0.0.1:8000/api/v1/register  HTTP/1.1
+content-type: application/json
+
+{
+    "user_name": "samplex2",
+    "nickname": "samplex2",
+    "Password": "sdsdsdsds",
+    "password_confirm": "sdsdsdsds",
+
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
+
+###
+POST http://127.0.0.1:8000/api/v1/login  HTTP/1.1
+content-type: application/json
+
+{
+    "user_name": "samplex2",
+    "Password": "sdsdsdsds",
+    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+}
+
+###
+GET http://127.0.0.1:8000/api/v1/user HTTP/1.1
+content-type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmF0aW9uX3RpbWUiOjE3MjU1MjExNzIsInVzZXJfaWQiOjkzLCJ1c2VybmFtZSI6InNhbXBsZXgyIn0.Tc640LDBoFrRTRFelrzgno6B3n-5evJfMnzqEkMWSno
+
+###
+PUT http://127.0.0.1:8000/api/v1/user HTTP/1.1
+content-type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmF0aW9uX3RpbWUiOjE3MjU1MjExNzIsInVzZXJfaWQiOjkzLCJ1c2VybmFtZSI6InNhbXBsZXgyIn0.Tc640LDBoFrRTRFelrzgno6B3n-5evJfMnzqEkMWSno
+
+{
+    "nickname": "samplex2.updatex2x2",
+    "_Password": "sdsdsdsdsxxss"
+}
+
+###
+DELETE  http://127.0.0.1:8000/api/v1/user/?91 HTTP/1.1
+content-type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmF0aW9uX3RpbWUiOjE3MjU1MjExNzIsInVzZXJfaWQiOjkzLCJ1c2VybmFtZSI6InNhbXBsZXgyIn0.Tc640LDBoFrRTRFelrzgno6B3n-5evJfMnzqEkMWSno
+
+
+
+

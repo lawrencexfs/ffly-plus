@@ -22,8 +22,6 @@ all: build
 
 .PHONY: build
 build: ## Build the binary file
-	@protoc -I ./internal internal/proto/*.proto --go_out=plugins=grpc:./internal
-	@swag init
 	@go build -v -ldflags ${ldflags} .
 	@gofmt -w .
 
